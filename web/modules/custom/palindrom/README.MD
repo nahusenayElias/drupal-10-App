@@ -26,7 +26,7 @@ This Drupal custom module, Palindrom, provides functionality to check if a given
  ```bash
 lando drush en module_name -y
 ```
-
+![test](https://github.com/nahusenayElias/drupal-10-App/blob/main/web/modules/custom/palindrom/Screenshot%202024-09-25%20at%2018.50.24.png)
 
 
 
