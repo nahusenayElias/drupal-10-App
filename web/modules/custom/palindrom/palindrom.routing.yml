@@ -1,0 +1,7 @@
+palindrom.page:
+  path: "/palindrom"
+  defaults:
+    _controller: 'Drupal\palindrom\Controller\PalindromController::content'
+    _title: "palindrom"
+  requirements:
+    _permission: "access content"

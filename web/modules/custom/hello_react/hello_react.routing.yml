@@ -1,0 +1,23 @@
+hello_react.page:
+  path: "/hello"
+  defaults:
+    _controller: 'Drupal\hello_react\Controller\HelloController::landing'
+    _title: "Welcome"
+  requirements:
+    _permission: "access content"
+
+hello_react.form:
+  path: "/hello-form"
+  defaults:
+    _form: 'Drupal\hello_react\Form\HelloNameForm'
+    _title: "Login"
+  requirements:
+    _permission: "access content"
+
+hello_react.greeting:
+  path: "/greeting/{user}"
+  defaults:
+    _controller: 'Drupal\hello_react\Controller\HelloController::greeting'
+    _title: "Dashboard"
+  requirements:
+    _permission: "access content"

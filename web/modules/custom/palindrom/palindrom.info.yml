@@ -1,0 +1,6 @@
+name: Palindrom Checker
+description: "A simple module to check a Palindrome"
+type: module
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node

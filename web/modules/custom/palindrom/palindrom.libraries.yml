@@ -1,0 +1,4 @@
+palindrom:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {}

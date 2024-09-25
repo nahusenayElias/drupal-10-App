@@ -1,0 +1,4 @@
+react_counter:
+  version: VERSION
+  js:
+    js/dist/main.min.js: {}

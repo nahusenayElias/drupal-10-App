@@ -1,0 +1,7 @@
+react_counter.page:
+  path: "/react-counter"
+  defaults:
+    _controller: 'Drupal\react_counter\Controller\ReactCounterController::content'
+    _title: "React counter"
+  requirements:
+    _permission: "access content"
