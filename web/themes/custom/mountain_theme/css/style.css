@@ -1,0 +1,53 @@
+ /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
+    background-color: navy;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Featured section styles */
+.featured {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/* Main content styles */
+.content {
+    background-color: lightblue;
+    color: red;
+    padding: 20px;
+}
+
+/* Right sidebar styles (if needed) */
+.right--sidebar {
+    background-color: lightblue;
+    padding: 20px;
+    color: red;
+}
+
+/* Footer styles */
+.footer {
+    background-color: navy;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer top section */
+.footer--top {
+    margin-bottom: 10px;
+}
+
+/* Footer bottom section */
+.footer--bottom {
+    border-top: 1px solid yellow;
+    padding-top: 10px;
+}
