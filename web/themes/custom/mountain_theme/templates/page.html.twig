@@ -1,11 +1,19 @@
 <header aria-label="Site header" class="header" id="header" role="banner">
+<div class="branding">
+    {% if logo %}
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+        <img src="{{ base_path ~ directory }}/images/logo.png" alt="{{ 'Home'|t }}" />
+      </a>
+    {% else %}
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+    {% endif %}
+  </div>
      {{ page.branding }}
      {{ page.navigation }}
-     {{ page.search }}
+     {{page.search}}
+
 </header>
-<section class="featured" id="featured" role="complementary">
-   {{ page.featured }}
-</section>
+
 <section class="main" id="main">
    <main aria-label="Site main content" class="content" id="content" role="main">
      {{ page.content }}
@@ -16,10 +24,6 @@
 </section>
 <footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
    <div class="footer--top">
-     {{ page.footer_first }}
-     {{ page.footer_second }}
-   </div>
-   <div class="footer--bottom">
-       {{ page.footer_bottom }}
+     {{ page.footer }}
    </div>
 </footer>
