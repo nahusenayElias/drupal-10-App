@@ -1,0 +1,16 @@
+name: Mountain Theme
+description: "Mountain custom theme for my website."
+type: theme
+core_version_requirement: ^9 || ^10 || ^11
+base theme: false
+
+libraries:
+  - mountain_theme/global-styling
+
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

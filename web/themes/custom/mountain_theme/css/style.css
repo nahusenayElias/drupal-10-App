@@ -1,53 +1,113 @@
- /* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+ /* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: white; /* Main body background */
 }
 
-/* Header styles */
+/* Header (Hero Banner) */
 .header {
-    background-color: navy;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #001f3f; /* Navy Blue */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.header .branding img {
+  max-width: 200px; /* Adjust size as needed */
+  height: auto;
 }
 
-/* Featured section styles */
-.featured {
-    background-color: lightblue;
-    padding: 20px;
+.header .screenshot img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Main content styles */
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Menu */
+.header nav {
+  margin-top: 15px;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header nav ul li {
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  font-weight: bold;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  margin: 10px 0;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
 .content {
-    background-color: lightblue;
-    color: red;
-    padding: 20px;
+  flex: 3;
+  padding: 20px;
+  background-color: white; /* Main content background is white */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Right sidebar styles (if needed) */
 .right--sidebar {
-    background-color: lightblue;
-    padding: 20px;
-    color: red;
+  flex: 1;
+  padding: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
-    background-color: navy;
-    color: yellow;
-    padding: 20px;
-    text-align: center;
+  background-color: #ADD8E6; /* Light Blue */
+  color: #333;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Footer top section */
 .footer--top {
-    margin-bottom: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
 }
 
-/* Footer bottom section */
-.footer--bottom {
-    border-top: 1px solid yellow;
-    padding-top: 10px;
+.footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+      flex-direction: column;
+  }
+
+  .right--sidebar {
+      margin-top: 20px;
+  }
 }
