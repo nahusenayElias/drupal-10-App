@@ -3,5 +3,6 @@ recipe: drupal10
 config:
   webroot: web
 services:
-  appservice:
-    type: phpmyadmin
+  appserver:
+    type: php:8.2
+
