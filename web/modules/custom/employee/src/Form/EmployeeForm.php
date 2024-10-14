@@ -75,15 +75,29 @@ final class EmployeeForm extends FormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state): void {
     // @todo Validate the form here.
-    // Example:
-    // @code
-    //   if (mb_strlen($form_state->getValue('message')) < 10) {
-    //     $form_state->setErrorByName(
-    //       'message',
-    //       $this->t('Message should be at least 10 characters.'),
-    //     );
-    //   }
-    // @endcode
+    $formField = $form_state->getValues();
+
+    $firstName = trim($formField['emp_firstname']);
+    $lastName = trim($formField['emp_lastname']);
+    $email = trim($formField['emp_email']);
+    $zipcode = trim($formField['emp_zipcode']);
+
+    if(!preg_match("/^([a-zA-Z']+)$/", $firstName)) {
+      $form_state->setErrorByName('emp_firstname', $this->t('Enter valid first name'));
+    }
+
+    if(!preg_match("/^([a-zA-Z']+)$/", $lastName)) {
+      $form_state->setErrorByName('emp_lastname', $this->t('Enter valid last name'));
+    }
+
+    if(!\Drupal::service('email.validator')->isValid($email)) {
+      $form_state->setErrorByName('emp_email', $this->t('Enter valid email address'));
+    }
+
+    if(!preg_match("/^\d{1,6}$/", $zipcode)) {
+      $form_state->setErrorByName('emp_zipcode', $this->t('Enter valid zip code'));
+    }
+
   }
 
   /**
@@ -91,7 +105,7 @@ final class EmployeeForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $this->messenger()->addStatus($this->t('Employee data has been saved successfully.'));
-    $form_state->setRedirect('<front>');
+    $form_state->setRedirect('employee.employee');
   }
 
 }
